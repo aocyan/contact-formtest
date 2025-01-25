@@ -1,3 +1,8 @@
+.background--color {
+    background-color: #F2ECE7;
+    padding-bottom: 50px;
+}
+
 .header-nav {
     width: 100%;
     padding: 20px 15px;

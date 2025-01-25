@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<div class="background--color">
     <nav>
         <div class="header-nav">
             <a class="header-nav__link" href="/auth/register">register</a>
@@ -30,4 +31,5 @@
             </div>
         </div>
     </form>
+</div>
 @endsection
