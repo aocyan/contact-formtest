@@ -1,0 +1,81 @@
+.confirm-header {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid #F2ECE7;
+}
+
+.confirm-header__logo {
+    color: #89827A;
+    font-family: "Times New Roman", "MS Mincho", "serif";
+    font-size: 20px;
+}
+
+.form {
+    margin: 0 auto 50px;
+    width: 70%;
+}
+
+.confirm-table {
+    border: 1px solid #ddd;
+}
+
+.confirm-table__inner {
+    width: 100%;
+}
+
+.confirm-table__header {
+    padding: 15px;
+    width: 20%;
+    border-bottom: 1px solid #fff;
+    background-color: #BBA99A;
+    color: #fff;
+    font-size: 15px;
+}
+
+.confirm-table__text {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    transform: translateY(-12px);
+    color: #96928F;
+}
+
+.confirm-table__text input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.confirm-table__row:last-child .confirm-table__header,
+.confirm-table__row:last-child .confirm-table__text {
+    border-bottom-width: 0;
+}
+
+.form-button {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin: 30px 35% 30px;
+}
+
+.form__submit--button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #82766A;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form__fix--button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    color: #96928F;
+    cursor: pointer;
+}
+
+.fix__text--item {
+    border-bottom: 1px solid #96928F;
+}
