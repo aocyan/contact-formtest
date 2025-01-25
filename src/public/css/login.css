@@ -24,7 +24,7 @@
 
 .login-header__logo {
     color: #89827A;
-    font-family: "Times New Roman", "MS Mincho", serif;
+    font-family: "Times New Roman", "MS Mincho", "serif";
     font-size: 20px;
 }
 
@@ -57,7 +57,7 @@
     border: 2px solid #F5F5F5;
     border-radius: 5px;
     color: #DAD8D4;
-    font-family: "Times New Roman", "MS Mincho", serif;
+    font-family: "Times New Roman", "MS Mincho", "serif";
     cursor: pointer;
 }
 
