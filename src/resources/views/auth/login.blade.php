@@ -7,7 +7,7 @@
 @section('content')
     <nav>
         <div class="header-nav">
-            <a class="header-nav__link" href="/categories">register</a>
+            <a class="header-nav__link" href="/auth/register">register</a>
         </div>
     </nav>
     <div class="login-header">

@@ -13,6 +13,7 @@
     border: 1px solid #F4F4ED;
     color: #DAD9D2;
     background-color: #F6F6F4;
+    cursor: pointer;
 }
 
 .login-header {
