@@ -8,7 +8,7 @@
 <div class="background--color">
     <nav>
         <div class="header-nav">
-            <a class="header-nav__link" href="/auth/login">login</a>
+            <a class="header-nav__link" href="/login">login</a>
         </div>
     </nav>
     <div class="register-header">
