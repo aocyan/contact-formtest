@@ -5,49 +5,48 @@ body {
 
 .thanks__inner {
     padding: 20px 15px;
+    font-size: 20em;
+    position: absolute;
+    top: 15%;
 }
 
 .thanks__logo {
     text-decoration: none;
     font-weight: bold;
     font-family: "Times New Roman", "MS Mincho", "serif";
-    font-size: 20em;
-    position: absolute;
-    top: 15%;
     color: #F8F8F8;
 }
 
 .confirm-thanks {
     padding: 20px 15px;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    z-index: 100;
 }
 
 .confirm-thanks--item {
     text-decoration: none;
     font-size: 20px;
-    position: absolute;
-    top: 45%;
-    left: 40%;
-    z-index: 100;
     font-weight: bold;
     color: #867B72;
 }
 
 .home__link {
     padding: 15px 20px;
+    position: absolute;
+    top: 55%;
+    left: 48%;
+    z-index: 100;
 }
 
 .home__link--item {
     text-decoration: none;
     font-size: 15px;
-    position: absolute;
-    top: 55%;
-    left: 48%;
-    z-index: 100;
     font-family: "Times New Roman", "MS Mincho", "serif";
     color: #fff;
-    background-color: #867B72;
-    border-color: ##867B72;
     padding: 10px 20px;
+    background-color: #867B72;    
 }
 
 
