@@ -16,20 +16,21 @@
             <h2>Register</h2>
         </div>
     </div>
-    <form class="register-form">
+    <form class="register-form" action="/register" method="post">
+    @csrf
         <div class="form__group">
             <div class="form__group-title">
                 <p>お名前</p>
             </div>
-            <input class="form__input" type="email" name="" value=""/ placeholder="例：山田　太郎">
+            <input class="form__input" type="text" name="name" value="{{ old('name') }}" />
             <div class="form__group-title">
                 <p>メールアドレス</p>
             </div>
-            <input class="form__input" type="email" name="" value=""/ placeholder="test@example.com">
+            <input class="form__input" type="email" name="email" value="{{ old('email')"/>
             <div class="form__group-title">
                 <p>パスワード</p>
             </div>
-            <input class="form__input" type="text" name="" value=""/ placeholder="coachtech1106">
+            <input class="form__input" type="password" name="password"/>
             <div class="form__button">
                 <button class="form__button-submit" type="submit">登録</button>
             </div>
