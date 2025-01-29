@@ -10,15 +10,16 @@
             <h2>Contact</h2>
         </div>
     </div>
-	<form class="form">
+	<form class="form" action="/contacts/confirm" method="post">
+	@csrf
 		<div class="form__group">
 			<div class="form__title">
 				<span>お名前 ※</span>
 			</div>
 			<div class="form__group-content">
 				<div class="form__input">
-					<input class="form__input--name" type="text" name="name" placeholder="例:山田" />
-                    <input class="form__input--name" type="text" name="name" placeholder="例:太郎" />
+					<input class="form__input--name" type="text" name="last_name" placeholder="例:山田" />
+                    <input class="form__input--name" type="text" name="first_name" placeholder="例:太郎" />
 				</div>
 				<div class="form__error">
 					<!--バリデーション機能を実装したら記述します。-->
@@ -32,13 +33,13 @@
 			<div class="form__group-content">
 				<div class="form__input-check">
 					<label class="form__input--label">
-                        <input type="radio" name="sex" value="男性" checked="checked">男性
+                        <input type="radio" name="gender" value="男性" checked="checked">男性
                     </label>
                     <label class="form__input--label">
-                        <input type="radio" name="sex" value="女性">女性
+                        <input type="radio" name="gender" value="女性">女性
                     </label>
                     <label class="form__input--label">
-                        <input type="radio" name="sex" value="その他">その他
+                        <input type="radio" name="gender" value="その他">その他
                     </label>
 				</div>
 				<div class="form__error">
@@ -65,11 +66,11 @@
 			</div>
 			<div class="form__group-content">
 				<div class="form__tel">
-					<input class="form__tel--text" type="tel" name="tel" placeholder="080" />
+					<input class="form__tel--text" type="tel" name="tel_first" placeholder="080" />
                     <span>-</span>
-                    <input class="form__tel--text" type="tel" name="tel" placeholder="1234" />
+                    <input class="form__tel--text" type="tel" name="tel_second" placeholder="1234" />
                     <span>-</span>
-                    <input class="form__tel--text" type="tel" name="tel" placeholder="5678" />  
+                    <input class="form__tel--text" type="tel" name="tel_third" placeholder="5678" />  
 				</div>
 				<div class="form__error">
 					<!--バリデーション機能を実装したら記述します。-->
@@ -82,7 +83,7 @@
 			</div>
 			<div class="form__group-content">
 				<div class="form__address">
-					<input class="form__address--text type="text" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" />
+					<input class="form__address--text" type="text" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" />
 				</div>
 				<div class="form__error">
 					<!--バリデーション機能を実装したら記述します。-->
@@ -95,7 +96,7 @@
 			</div>
 			<div class="form__group-content">
 				<div class="form__building">
-					<input class="form__building--text type="text" name="building" placeholder="例:千駄ヶ谷マンション101" />
+					<input class="form__building--text" type="text" name="building" placeholder="例:千駄ヶ谷マンション101" />
 				</div>
 				<div class="form__error">
 					<!--バリデーション機能を実装したら記述します。-->
@@ -108,8 +109,13 @@
 			</div>
 				<div class="form__group-content">
 					<div class="form__kinds">
-                        <select class="form__kinds-select">
-						    <option class="form__kinds--option" value="" disabled selected>選択してください</option>
+                        <select class="form__kinds-select" name="kinds" >
+						    <option class="form__kinds--option" disabled selected>選択してください</option>
+							<option class="form__kinds--option" value="商品のお届けについて">商品のお届けについて</option>
+							<option class="form__kinds--option" value="商品の交換について">商品の交換について</option>
+							<option class="form__kinds--option" value="商品トラブル">商品トラブル</option>
+							<option class="form__kinds--option" value="ショップへのお問い合わせ">ショップへのお問い合わせ</option>
+							<option class="form__kinds--option" value="その他">その他</option>
                         </select>
 					</div>
                 </div>

@@ -11,9 +11,24 @@ class ContactController extends Controller
         return view('index');
     }
 
-    public function confirm()
+    public function confirm(Request $request)
     {
-        return view('confirm');
+
+        $contact = $request->only([
+            'last_name',
+            'first_name',
+            'gender', 
+            'email', 
+            'tel_first',
+            'tel_second',
+            'tel_third',
+            'address',
+            'building',
+            'kinds', 
+            'content'
+        ]);
+
+        return view('confirm', compact('contact'));
     }
 
     public function thanks()

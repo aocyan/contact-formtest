@@ -16,49 +16,52 @@
 				<tr class="confirm-table__row">
 					<th class="confirm-table__header">お名前</th>
 					<td class="confirm-table__text">
-						<input class="confirm-table__text--item type="text" name="name" value="" />山田　太郎
+						<input class="confirm-table__text--item type="text" name="last_name" value="{{ $contact['last_name'] }}" readonly />
+						<input class="confirm-table__text--item type="text" name="first_name" value="{{ $contact['first_name'] }}" readonly />
 					</td>
 				</tr>
                 <tr class="confirm-table__row">
 					<th class="confirm-table__header">性別</th>
 					<td class="confirm-table__text">
-						<input type="text" name="sex" value="" />男性
+						<input type="text" name="dender" value="{{ $contact['gender'] }}" readonly />
 					</td>
 				</tr>
 				<tr class="confirm-table__row">
 					<th class="confirm-table__header">メールアドレス</th>
 					<td class="confirm-table__text">
-						<input type="email" name="email" value="" />test@example.com
+						<input type="email" name="email" value="{{ $contact['email'] }}" readonly />
 					</td>
 				</tr>
 				<tr class="confirm-table__row">
 					<th class="confirm-table__header">電話番号</th>
 					<td class="confirm-table__text">
-						<input type="tel" name="tel" value="" />08012345678
+						<input type="tel" name="tel_first" value="{{ $contact['tel_first'] }}" readonly />
+						<input type="tel" name="tel_second" value="{{ $contact['tel_second'] }}" readonly />
+						<input type="tel" name="tel_third" value="{{ $contact['tel_third'] }}" readonly />
 					</td>
 				</tr>
                 <tr class="confirm-table__row">
 					<th class="confirm-table__header">住所</th>
 					<td class="confirm-table__text">
-						<input type="tel" name="address" value="" />東京都渋谷区千駄ヶ谷1-2-3
+						<input type="tel" name="address" value="{{ $contact['address'] }}" readonly />
 					</td>
 				</tr>
                 <tr class="confirm-table__row">
 					<th class="confirm-table__header">建物名</th>
 					<td class="confirm-table__text">
-						<input type="tel" name="building" value="" />千駄ヶ谷マンション101
+						<input type="tel" name="building" value="{{ $contact['building'] }}" readonly />
 					</td>
 				</tr>
                 <tr class="confirm-table__row">
 					<th class="confirm-table__header">お問い合わせの種類</th>
 					<td class="confirm-table__text">
-						<input type="tel" name="kinds" value="" />商品の交換について
+						<input type="tel" name="kinds" value="{{ $contact['kinds'] }}" readonly />
 					</td>
 				</tr>
 				<tr class="confirm-table__row">
 					<th class="confirm-table__header">お問い合わせの内容</th>
 					<td class="confirm-table__text">
-						<input type="text" name="content" value="" />届いた商品が注文した商品ではありませんでした。</br>商品の取り替えをお願いします。
+						<input type="text" name="content" value="{{ $contact['content'] }}" readonly />
 					</td>
 				</tr>
 					</table>
