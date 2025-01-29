@@ -18,8 +18,8 @@
 			</div>
 			<div class="form__group-content">
 				<div class="form__input">
-					<input class="form__input--name" type="text" name="last_name" placeholder="例:山田" />
-                    <input class="form__input--name" type="text" name="first_name" placeholder="例:太郎" />
+					<input class="form__input--name" type="text" name="last_name" value="{{ old('last_name') }}"  placeholder="例:山田" />
+                    <input class="form__input--name" type="text" name="first_name" value="{{ old('first_name') }}"  placeholder="例:太郎" />
 				</div>
 				<div class="form__error">
 					<!--バリデーション機能を実装したら記述します。-->
@@ -53,7 +53,7 @@
 			</div>
 			<div class="form__group-content">
 				<div class="form__email">
-					<input class="form__email--text" type="email" name="email" placeholder="例:test@example.com" />
+					<input class="form__email--text" type="email" name="email" value="{{ old('email') }}" placeholder="例:test@example.com" />
 				</div>
 				<div class="form__error">
 					<!--バリデーション機能を実装したら記述します。-->
@@ -66,11 +66,11 @@
 			</div>
 			<div class="form__group-content">
 				<div class="form__tel">
-					<input class="form__tel--text" type="tel" name="tel_first" placeholder="080" />
+					<input class="form__tel--text" type="tel" name="tel_first" value="{{ old('tel_first') }}" placeholder="080" />
                     <span>-</span>
-                    <input class="form__tel--text" type="tel" name="tel_second" placeholder="1234" />
+                    <input class="form__tel--text" type="tel" name="tel_second" value="{{ old('tel_second') }}" placeholder="1234" />
                     <span>-</span>
-                    <input class="form__tel--text" type="tel" name="tel_third" placeholder="5678" />  
+                    <input class="form__tel--text" type="tel" name="tel_third" value="{{ old('tel_third') }}" placeholder="5678" />  
 				</div>
 				<div class="form__error">
 					<!--バリデーション機能を実装したら記述します。-->
@@ -83,7 +83,7 @@
 			</div>
 			<div class="form__group-content">
 				<div class="form__address">
-					<input class="form__address--text" type="text" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" />
+					<input class="form__address--text" type="text" name="address" value="{{ old('address') }}" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" />
 				</div>
 				<div class="form__error">
 					<!--バリデーション機能を実装したら記述します。-->
@@ -96,7 +96,7 @@
 			</div>
 			<div class="form__group-content">
 				<div class="form__building">
-					<input class="form__building--text" type="text" name="building" placeholder="例:千駄ヶ谷マンション101" />
+					<input class="form__building--text" type="text" name="building" value="{{ old('building') }}" placeholder="例:千駄ヶ谷マンション101" />
 				</div>
 				<div class="form__error">
 					<!--バリデーション機能を実装したら記述します。-->

@@ -36,6 +36,11 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
+        if($request->input('fix') == 'fix'){
+            return redirect('/')
+                        ->withInput();
+        }
+
 	    $contact = $request->only([
             'last_name',
             'first_name',

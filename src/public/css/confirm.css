@@ -50,7 +50,7 @@
 
 .text__name {
     display: flex;
-    width:80px;
+    width: 80px;
     justify-content: space-between;
 }
 
@@ -67,8 +67,9 @@
 }
 
 .text__tel {
-    width: 200px;
-    text-align:left;
+    width: 100px;
+    display:flex;
+    text-align: left;
 }
 
 .text__address--item {
@@ -85,7 +86,7 @@
 
 .content--area {
     width: 100%;
-    border : none;
+    border: none;
     outline: none;
 }
 
