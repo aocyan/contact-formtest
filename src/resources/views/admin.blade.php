@@ -13,7 +13,10 @@
 
     <nav>
         <div class="header-nav">
-            <a class="header-nav__link" href="/">logout</a>
+            <form action="/logout" method="post">
+            @csrf
+                <button type="submit" class="header-nav__link">Logout</button>
+            </form>
         </div>
 
         <div class="search">

@@ -23,14 +23,29 @@
                 <p>お名前</p>
             </div>
             <input class="form__input" type="text" name="name" value="{{ old('name') }}" />
+            <div class="form__error">
+                @error('name')
+                 {{ $message }}
+                @enderror
+            </div>
             <div class="form__group-title">
                 <p>メールアドレス</p>
             </div>
             <input class="form__input" type="email" name="email" value="{{ old('email') }}"/>
+            <div class="form__error">
+                @error('email')
+                    {{ $message }}
+                @enderror
+            </div>
             <div class="form__group-title">
                 <p>パスワード</p>
             </div>
             <input class="form__input" type="password" name="password"/>
+            <div class="form__error">
+                @error('password')
+                    {{ $message }}
+                @enderror
+            </div>
             <div class="form__button">
                 <button class="form__button-submit" type="submit">登録</button>
             </div>

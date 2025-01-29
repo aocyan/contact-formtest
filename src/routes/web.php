@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
+use Laravel\Fortify\Fortify;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,16 +16,12 @@ use App\Http\Controllers\AuthController;
 |
 */
 
+Route::middleware('auth')->group(function () {
+    Route::get('/admin', [AuthController::class, 'admin']);
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
-Route::middleware('auth')->group(function () {
-    Route::get('/', [AuthController::class, 'index']);
-});
 
 Route::get('/confirm', [ContactController::class, 'confirm']);
-Route::get('/thanks', [ContactController::class, 'thanks']);
-Route::get('/admin', [ContactController::class, 'admin']);
-Route::get('/login', [ContactController::class, 'login']);
-Route::get('/register', [ContactController::class, 'register']);
-

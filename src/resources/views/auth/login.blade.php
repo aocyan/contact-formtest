@@ -22,9 +22,19 @@
             <div class="form__group-title">
                 <p>メールアドレス</p>
             </div>
+            <div class="form__error">
+                @error('email')
+                    {{ $message }}
+                @enderror
+            </div>
             <input class="form__input" type="email" name="email" value="{{ old('email') }}"/>
             <div class="form__group-title">
                 <p>パスワード</p>
+            </div>
+            <div class="form__error">
+                @error('password')
+                    {{ $message }}
+                @enderror
             </div>
             <input class="form__input" type="password" name="password"/>
             <div class="form__button">
