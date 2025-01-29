@@ -10,7 +10,8 @@
             <h2>Confirm</h2>
         </div>
     </div>
-	<form class="form">
+	<form class="form" action="/contacts" method="post">
+	@csrf
 		<div class="confirm-table">
 			<table class="confirm-table__inner">
 				<tr class="confirm-table__row">
@@ -25,7 +26,7 @@
                 <tr class="confirm-table__row">
 					<th class="confirm-table__header">性別</th>
 					<td class="confirm-table__text">
-						<input class="text__gender--item" type="text" name="dender" value="{{ $contact['gender'] }}" readonly />
+						<input class="text__gender--item" type="text" name="gender" value="{{ $contact['gender'] }}" readonly />
 					</td>
 				</tr>
 				<tr class="confirm-table__row">
@@ -38,9 +39,8 @@
 					<th class="confirm-table__header">電話番号</th>
 					<td class="confirm-table__text">
 						<div class="text__tel">
-							<input type="tel" name="tel_first" value="{{ $contact['tel_first'] }}" readonly />
-							<input type="tel" name="tel_second" value="{{ $contact['tel_second'] }}" readonly />
-							<input type="tel" name="tel_third" value="{{ $contact['tel_third'] }}" readonly />
+							<input type="tel" name="tel_first" value="{{ $tel }}" readonly />
+							<input type="hidden" name="tel" value="{{ $tel }}" />
 						</div>
 					</td>
 				</tr>
@@ -59,7 +59,7 @@
                 <tr class="confirm-table__row">
 					<th class="confirm-table__header">お問い合わせの種類</th>
 					<td class="confirm-table__text">
-						<input class=""text__kinds--item" type="text" name="kinds" value="{{ $contact['kinds'] }}" readonly />
+						<input class=""text__detail--item" type="text" name="detail" value="{{ $contact['detail'] }}" readonly />
 					</td>
 				</tr>
 				<tr class="confirm-table__row">

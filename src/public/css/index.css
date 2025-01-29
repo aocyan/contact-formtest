@@ -123,11 +123,11 @@
     font-size: 10px;
 }
 
-.form__kinds {
+.form__detail {
     margin-left: 15px;
 }
 
-.form__kinds-select {
+.form__detail-select {
     width: 200px;
     padding: 3px 0;
     text-decoration: none;
@@ -137,7 +137,7 @@
     cursor: pointer;
 }
 
-.form__kinds--option {
+.form__detail--option {
     color: #a2a29b;
 }
 

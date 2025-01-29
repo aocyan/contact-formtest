@@ -108,14 +108,14 @@
 				<span>お問い合わせの種類 ※</span>
 			</div>
 				<div class="form__group-content">
-					<div class="form__kinds">
-                        <select class="form__kinds-select" name="kinds" >
-						    <option class="form__kinds--option" disabled selected>選択してください</option>
-							<option class="form__kinds--option" value="商品のお届けについて">商品のお届けについて</option>
-							<option class="form__kinds--option" value="商品の交換について">商品の交換について</option>
-							<option class="form__kinds--option" value="商品トラブル">商品トラブル</option>
-							<option class="form__kinds--option" value="ショップへのお問い合わせ">ショップへのお問い合わせ</option>
-							<option class="form__kinds--option" value="その他">その他</option>
+					<div class="form__detail">
+                        <select class="form__detail-select" name="detail" >
+						    <option class="form__detail--option" disabled selected>選択してください</option>
+							<option class="form__detail--option" value="商品のお届けについて">商品のお届けについて</option>
+							<option class="form__detail--option" value="商品の交換について">商品の交換について</option>
+							<option class="form__detail--option" value="商品トラブル">商品トラブル</option>
+							<option class="form__detail--option" value="ショップへのお問い合わせ">ショップへのお問い合わせ</option>
+							<option class="form__detail--option" value="その他">その他</option>
                         </select>
 					</div>
                 </div>

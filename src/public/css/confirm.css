@@ -67,8 +67,7 @@
 }
 
 .text__tel {
-    display: flex;
-    width: 100px;
+    width: 200px;
     text-align:left;
 }
 
@@ -80,7 +79,7 @@
     text-align: left;
 }
 
-.text__kinds--item {
+.text__detail--item {
     text-align: left;
 }
 
