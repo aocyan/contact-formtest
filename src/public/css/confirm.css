@@ -38,15 +38,58 @@
     padding: 15px;
     border-bottom: 1px solid #ddd;
     font-size: 14px;
-    transform: translateY(-12px);
     color: #96928F;
 }
 
 .confirm-table__text input {
-    width: 100%;
-    outline: none;
+    width: 70%;
     border: none;
+    outline: none;
+    color: #706d6a;
 }
+
+.text__name {
+    display: flex;
+    width:80px;
+    justify-content: space-between;
+}
+
+.text__name--item {
+    text-align: left;
+}
+
+.text__gender--item {
+    text-align: left;
+}
+
+.text__email--item {
+    text-align: left;
+}
+
+.text__tel {
+    display: flex;
+    width: 100px;
+    text-align:left;
+}
+
+.text__address--item {
+    text-align: left;
+}
+
+.text__building--item {
+    text-align: left;
+}
+
+.text__kinds--item {
+    text-align: left;
+}
+
+.content--area {
+    width: 100%;
+    border : none;
+    outline: none;
+}
+
 
 .confirm-table__row:last-child .confirm-table__header,
 .confirm-table__row:last-child .confirm-table__text {
