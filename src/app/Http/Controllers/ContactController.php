@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
 use Illuminate\Http\Request;
@@ -27,8 +28,8 @@ class ContactController extends Controller
             'tel_third',
             'address',
             'building',
-            'detail', 
-            'content'
+            'detail',
+            'content', 
         ]);
 
          $tel = $request->tel_first . $request->tel_second . $request->tel_third;
@@ -43,7 +44,12 @@ class ContactController extends Controller
                         ->withInput();
         }
 
+        $category = Category::create([
+            'content' => $request->input('content')
+        ]);
+
 	    $contact = $request->only([
+            'category_id',
             'last_name',
             'first_name',
             'gender', 
@@ -51,10 +57,11 @@ class ContactController extends Controller
             'tel',
             'address',
             'building',
-            'detail', 
-            'content'
+            'detail',
         ]);
         
+        $contact['category_id'] = $category->id;
+
         Contact::create($contact);
 
         return view('thanks');

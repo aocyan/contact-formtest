@@ -5,24 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contact extends Model
+class Category extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'category_id',
-		'first_name',
-        'last_name',
-        'gender',
-		'email',
-		'tel',
-		'address',
-        'building',
-        'detail',
+        'content',
     ];
 
     public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->hasMany(Contact::class);
     }
 }
