@@ -2,6 +2,7 @@
 
 @section('css')
 	<link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <link rel="stylesheet" href="{{ '/css/app.css' }}">
 @endsection
 
 @section('content')
@@ -58,7 +59,7 @@
                      <a class="link__export--item" href="">エクスポート</a>
                 </div>
                 <div class="sab-nav_page">
-                    {{ $pages->links() }}
+                    {{ $contacts->links() }}
                 </div>
             </div>
         </div>

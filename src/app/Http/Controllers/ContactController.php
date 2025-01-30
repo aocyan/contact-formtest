@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 
 class ContactController extends Controller
 {
@@ -61,11 +62,9 @@ class ContactController extends Controller
 
     public function admin()
     {
-		$contacts = Contact::all();
+		$contacts = Contact::paginate(1);
 
-        $pages = Contact::paginate(1);
-
-        return view('admin', compact('contacts','pages'));
+        return view('admin', compact('contacts'));
 
 	} 
 
