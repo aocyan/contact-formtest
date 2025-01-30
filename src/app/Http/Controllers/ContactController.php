@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,7 @@ class ContactController extends Controller
         return view('index');
     }
 
-    public function confirm(Request $request)
+    public function confirm(ContactRequest $request)
     {
 
         $contact = $request->only([
@@ -29,12 +30,12 @@ class ContactController extends Controller
             'content'
         ]);
 
-        $tel = $request->tel_first . $request->tel_second . $request->tel_third; 
+         $tel = $request->tel_first . $request->tel_second . $request->tel_third; 
 
-        return view('confirm', compact('contact','tel'));
+        return view('confirm', compact('contact','tel'));       
     }
 
-    public function store(Request $request)
+    public function store(ContactRequest $request)
     {
         if($request->input('fix') == 'fix'){
             return redirect('/')
