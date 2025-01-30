@@ -49,7 +49,7 @@
     cursor: pointer;
 }
 
-.search__sex--select {
+.search__gender--select {
     width: 75px;
     padding: 5px;
     font-size: 15px;
@@ -60,7 +60,7 @@
     cursor: pointer;
 }
 
-.search__kinds-select {
+.search__detail-select {
     width: 200px;
     padding: 5px;
     font-size: 15px;
@@ -147,14 +147,11 @@
     padding: 15px;
     border-bottom: 1px solid #ddd;
     font-size: 14px;
-    transform: translate(82px,-5px);
     color: #96928F;
 }
 
 .admin-table__text input {
     width: 100%;
-    outline: none;
-    border: none;
 }
 
 .admin-table__row:last-child .confirm-table__header,

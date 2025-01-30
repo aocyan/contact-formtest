@@ -30,7 +30,7 @@ class ContactController extends Controller
             'content'
         ]);
 
-         $tel = $request->tel_first . $request->tel_second . $request->tel_third; 
+         $tel = $request->tel_first . $request->tel_second . $request->tel_third;
 
         return view('confirm', compact('contact','tel'));       
     }
@@ -61,8 +61,9 @@ class ContactController extends Controller
 
     public function admin()
     {
-        return view('admin');
-    }
+		$contacts = Contact::all();
+		return view('admin', compact('contacts'));
+	} 
 
     public function login()
     {
