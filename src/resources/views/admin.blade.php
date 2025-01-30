@@ -58,7 +58,7 @@
                      <a class="link__export--item" href="">エクスポート</a>
                 </div>
                 <div class="sab-nav_page">
-                    ※ページネーション
+                    {{ $pages->links() }}
                 </div>
             </div>
         </div>

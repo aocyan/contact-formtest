@@ -62,7 +62,11 @@ class ContactController extends Controller
     public function admin()
     {
 		$contacts = Contact::all();
-		return view('admin', compact('contacts'));
+
+        $pages = Contact::paginate(1);
+
+        return view('admin', compact('contacts','pages'));
+
 	} 
 
     public function login()
