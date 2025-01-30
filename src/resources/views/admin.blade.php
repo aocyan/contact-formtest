@@ -78,17 +78,25 @@
             @foreach ($contacts as $contact)
                 <tr class="admin-table__row">
 					<td class="admin-table__text">
-                        <input type="text" name="last_name" value="{{ $contact['last_name'] }}" readonly/>
-                        <input type="text" name="first_name" value="{{ $contact['first_name'] }}" readonly/>
+                        <div class="table__name">
+                            <input class="name--item" type="text" name="last_name" value="{{ $contact['last_name'] }}" readonly/>
+                            <input class="name--item" type="text" name="first_name" value="{{ $contact['first_name'] }}" readonly/>
+                        </div>
                     </td>
 					<td class="admin-table__text">
-						<input type="text" name="gender" value="{{ $contact['gender'] }}" readonly />
+                        <div class="table__gender">
+						    <input class="gender--item" type="text" name="gender" value="{{ $contact['gender'] }}" readonly />
+                        </div>
 					</td>
                     <td class="admin-table__text">
-						<input type="email" name="email" value="{{ $contact['email'] }}" readonly />
+                        <div class="table__email">
+						    <input class="email--item type="email" name="email" value="{{ $contact['email'] }}" readonly />
+                        </div>
                     </td>
                     <td class="admin-table__text">
-						<input type="text" name="detail" value="{{ $contact['detail'] }}" readonly/>
+                        <div class="table__detail">
+						    <input class="detail--item" type="text" name="detail" value="{{ $contact['detail'] }}" readonly/>
+                        </div>
                     <td class="admin-table__text">
                         <div class="modal">
                              <a class="modal__link" href="">詳細</a>

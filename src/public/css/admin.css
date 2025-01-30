@@ -152,6 +152,57 @@
 
 .admin-table__text input {
     width: 100%;
+    outline: none;
+    border: none;
+}
+
+.table__name {
+    display: flex;
+    padding: 0;
+    margin-left: 35%;
+    width: 100px;
+    text-align: left;
+}
+
+.table__gender {
+    padding: 0;
+    margin-left: 45%;
+    width: 90px;
+    text-align: left;
+}
+
+.table__email {
+    padding: 0;
+    margin-left: 15%;
+    width: 200px;
+    text-align: left;
+}
+
+.table__detail {
+    padding: 0;
+    margin-left: 25%;
+    width: 200px;
+    text-align: left;
+}
+
+.name--item{
+    color: #817A71;
+    font-size: 15px;
+} 
+
+.gender--item {
+    color: #817A71;
+    font-size: 15px;
+} 
+
+.email--item {
+    color: #817A71;
+    font-size: 15px;
+} 
+
+.detail--item {
+    color: #817A71;
+    font-size:15px;
 }
 
 .admin-table__row:last-child .confirm-table__header,
@@ -184,6 +235,10 @@
 
 .fix__text--item {
     border-bottom: 1px solid #96928F;
+}
+
+.modal {
+    margin-left: 20%;
 }
 
 .modal__link {
