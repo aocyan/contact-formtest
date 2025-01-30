@@ -19,13 +19,13 @@
 			<div class="form__group-content">
 				<div class="form__input">
 					<input class="form__input--name" type="text" name="last_name" value="{{ old('last_name') }}"  placeholder="例:山田" />
-					<div class="form__error">
+					<div class="form__error--name">
 					@error('last_name')
 						{{ $message }}
 					@enderror
 				</div>
                     <input class="form__input--name" type="text" name="first_name" value="{{ old('first_name') }}"  placeholder="例:太郎" />
-					<div class="form__error">
+					<div class="form__error--name">
 					@error('first_name')
 						{{ $message }}
 					@enderror
@@ -64,7 +64,7 @@
 				<div class="form__email">
 					<input class="form__email--text" type="email" name="email" value="{{ old('email') }}" placeholder="例:test@example.com" />
 				</div>
-				<div class="form__error">
+				<div class="form__error--email">
 					@error('email')
 						{{ $message }}
 					@enderror
@@ -78,25 +78,19 @@
 			<div class="form__group-content">
 				<div class="form__tel">
 					<input class="form__tel--text" type="tel" name="tel_first" value="{{ old('tel_first') }}" placeholder="080" />
-					<div class="form__error">
-						@error('tel_first')
-							{{ $message }}
-						@enderror
-					</div>
                     <span>-</span>
                     <input class="form__tel--text" type="tel" name="tel_second" value="{{ old('tel_second') }}" placeholder="1234" />
-					<div class="form__error">
-						@error('tel_second')
-							{{ $message }}
-						@enderror
-					</div>
                     <span>-</span>
                     <input class="form__tel--text" type="tel" name="tel_third" value="{{ old('tel_third') }}" placeholder="5678" />
-					<div class="form__error">
-						@error('tel_third')
-							{{ $message }}
-						@enderror
-				</div>  
+				</div>
+				<div class="form__error--tel">
+					@error('tel_first')
+    					<p>{{ $message }}</p>
+					@elseif ($errors->has('tel_second'))
+    					<p>{{ $errors->first('tel_second') }}</p>
+					@elseif ($errors->has('tel_third'))
+    					<p>{{ $errors->first('tel_third') }}</p>
+					@enderror
 				</div>
 			</div>
 		</div>
@@ -108,7 +102,7 @@
 				<div class="form__address">
 					<input class="form__address--text" type="text" name="address" value="{{ old('address') }}" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" />
 				</div>
-				<div class="form__error">
+				<div class="form__error--address">
 					@error('address')
 						{{ $message }}
 					@enderror
@@ -140,7 +134,7 @@
 							<option class="form__detail--option" value="その他">その他</option>
                         </select>
 					</div>
-					<div class="form__error">
+					<div class="form__error--detail">
 						@error('detail')
 							{{ $message }}
 						@enderror
@@ -154,9 +148,9 @@
 			</div>
 				<div class="form__group-content">
 					<div class="form__textarea">
-						<textarea class="form__textarea--text" name="content" value="{{ old('content') }}" placeholder="お問い合わせ内容をご記載ください"></textarea>
+						<textarea class="form__textarea--text" name="content" placeholder="お問い合わせ内容をご記載ください"></textarea>
 					</div>
-					<div class="form__error">
+					<div class="form__error--content">
 						@error('content')
 							{{ $message }}
 						@enderror
