@@ -51,7 +51,7 @@
 				    <button class="search__button--item" type="submit">検索</button>
                 </div>
                 <div class="search__reset">
-                    <button class="search__reset--item" type="submit">リセット</button>
+                    <input class="search__reset--item" type="reset" value="リセット" />
                 </div>
             </div>
 
