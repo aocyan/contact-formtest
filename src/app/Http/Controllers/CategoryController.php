@@ -28,14 +28,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
 	    $contact = $request->only([
-            'last_name',
-            'first_name',
-            'gender', 
-            'email', 
-            'tel',
-            'address',
-            'building',
-            'content',
+            'detail',
         ]);
     }
 }

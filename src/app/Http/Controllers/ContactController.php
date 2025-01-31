@@ -45,7 +45,7 @@ class ContactController extends Controller
         }
 
         $category = Category::create([
-            'content' => $request->input('content')
+            'detail' => $request->input('detail')
         ]);
 
 	    $contact = $request->only([
@@ -57,7 +57,7 @@ class ContactController extends Controller
             'tel',
             'address',
             'building',
-            'detail',
+            'content',
         ]);
 
         $contact['category_id'] = $category->id;
@@ -69,12 +69,12 @@ class ContactController extends Controller
 
     public function admin()
     {
-		$contacts = Contact::paginate(7);
+		$contacts = Contact::with('category')->paginate(7);
 
-        $categories = Contact::all();
-        $categories = Contact::with('category')->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->get();
 
-        return view('admin', compact('contacts','categories'));
+        //$categories = Contact::with('category')->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->get();
+
+        return view('admin', compact('contacts'));
 
 	}
 

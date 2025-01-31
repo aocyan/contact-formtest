@@ -97,7 +97,7 @@
                     </td>
                     <td class="admin-table__text">
                         <div class="table__detail">
-						    <input class="detail--item" type="text" name="detail" value="{{ $contact['detail'] }}" readonly/>
+						    <input class="detail--item" type="text" name="detail" value="{{ $contact->category->detail }}" readonly/>
                         </div>
                     <td class="admin-table__text">
                         <div class="modal">
