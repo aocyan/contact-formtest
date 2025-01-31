@@ -166,11 +166,11 @@
     font-size: 10px;
 }
 
-.form__content {
+.form__detail {
     margin-left: 15px;
 }
 
-.form__content-select {
+.form__detail-select {
     width: 200px;
     padding: 3px 0;
     text-decoration: none;
@@ -180,11 +180,11 @@
     cursor: pointer;
 }
 
-.form__content--option {
+.form__detail--option {
     color: #a2a29b;
 }
 
-.form__error--content {
+.form__error--detail {
     width: 98%;
     padding: 0 2%;
     font-size: 12px;
@@ -215,7 +215,7 @@
     font-size: 12px;
 }
 
-.form__error--detail {
+.form__error--content {
     width: 95%;
     padding: 0 2%;
     font-size: 12px;

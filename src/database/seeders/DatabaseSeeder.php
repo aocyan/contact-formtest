@@ -10,7 +10,6 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        // CategorySeederを呼び出し
         $this->call(CategorySeeder::class);
 
         Contact::factory()->count(35)->create();
