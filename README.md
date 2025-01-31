@@ -15,7 +15,7 @@ Laravel環境構築
   6.php artisan db:seed
 
 ER図
-https://github.com/aocyan/contact-formtest/commit/8acc18ddb683376e33f76af24c5c22c84d3a744d#diff-4cbdf230aad52c0d5d318ea0e4548a9122ad1c6ba472af6ae2fa17ae643ac5ff
+https://raw.githubusercontent.com/aocyan/contact-formtest/988c667ec2a8861d0fd5bb96192dc6603cdfe3e2/confirmtest.drawio.png
 
 使用技術
 　・PHP 7.4.9
