@@ -21,14 +21,12 @@ class CategoryController extends Controller
             'building',
             'content', 
         ]);
-        
+
         return view('confirm', compact('contact'));       
     }
 
     public function store(Request $request)
     {
-
-
 	    $contact = $request->only([
             'last_name',
             'first_name',
@@ -37,7 +35,7 @@ class CategoryController extends Controller
             'tel',
             'address',
             'building',
-            'detail',
+            'content',
         ]);
     }
 }

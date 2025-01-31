@@ -20,17 +20,18 @@
             </form>
         </div>
 
-        <div class="search">
+        <form class="search" action="/categories/search" method="get">
+        @csrf
             <div class="search__menu">
                 <div class="menu__name">
-                    <input class="menu__name--text type="text" name="search-name" value="" placeholder="名前やメールアドレスを入力してください"/>
+                    <input class="menu__name--text type="text" name="search-name" value="{{ old('keyword') }}" placeholder="名前やメールアドレスを入力してください"/>
                 </div>
                 <div class="search__gender">
-                    <select class="search__gender--select">
-					    <option class="search__gender--option" value="" disabled selected>性別</option>
+                    <select class="search__gender--select" name="category_id">
                         <option class="search__gender--option" value="男性" >男性</option>
                         <option class="search__gender--option" value="女性" >女性</option>
                         <option class="search__gender--option" value="その他" >その他</option>
+                        <option class="search__gender--option" value="全て" >全て</option>
                     </select>
                 </div>
                 <div class="search__detail">
@@ -62,7 +63,7 @@
                     {{ $contacts->links() }}
                 </div>
             </div>
-        </div>
+        </form>
     </nav>
 
 	<form action="/contacts" method="post">

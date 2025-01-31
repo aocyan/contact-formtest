@@ -59,7 +59,7 @@ class ContactController extends Controller
             'building',
             'detail',
         ]);
-        
+
         $contact['category_id'] = $category->id;
 
         Contact::create($contact);
@@ -69,11 +69,14 @@ class ContactController extends Controller
 
     public function admin()
     {
-		$contacts = Contact::paginate(1);
+		$contacts = Contact::paginate(7);
 
-        return view('admin', compact('contacts'));
+        $categories = Contact::all();
+        $categories = Contact::with('category')->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->get();
 
-	} 
+        return view('admin', compact('contacts','categories'));
+
+	}
 
     public function login()
     {
