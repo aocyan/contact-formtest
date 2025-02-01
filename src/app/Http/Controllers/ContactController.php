@@ -83,12 +83,20 @@ class ContactController extends Controller
     public function search(Request $request)
     {
         $gender = $request->input('gender');
-        
+        $detail = $request->input('detail');
+
         $alldata = Contact::with('category');
 
         if ($gender && $gender != '全て') {
             $alldata->where('gender', 'LIKE', "%{$gender}%");
-        }      
+        }
+        
+        if ($detail) {
+            $alldata->whereHas('category', function($query) use ($detail) {
+            $query->where('detail', 'LIKE', "%{$detail}%");
+        });
+    }
+
 
         $contacts = $alldata->paginate(7);
 
