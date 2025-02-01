@@ -27,7 +27,7 @@
                 </div>
                 <div class="search__gender">
                     <select class="search__gender--select" name="gender">
-                        <option class="search__detail--text" value="" disabled selected>性別</option>
+                        <option class="search__gender--option" value="" disabled selected>性別</option>
                         <option class="search__gender--option" value="男性" {{ request('gender') == '男性' ? 'selected' : '' }}>男性</option>
                         <option class="search__gender--option" value="女性"{{ request('gender') == '女性' ? 'selected' : '' }}>女性</option>
                         <option class="search__gender--option" value="その他" {{ request('gender') == 'その他' ? 'selected' : '' }}>その他</option>
