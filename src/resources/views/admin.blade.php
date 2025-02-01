@@ -20,22 +20,22 @@
             </form>
         </div>
 
-        <form class="search" action="/categories/search" method="get">
-        @csrf
+        <form class="search" action="/contacts/search" method="get">
             <div class="search__menu">
                 <div class="menu__name">
-                    <input class="menu__name--text type="text" name="search-name" value="{{ old('keyword') }}" placeholder="名前やメールアドレスを入力してください"/>
+                    <input class="menu__name--text type="text" name="search-name" value="" placeholder="名前やメールアドレスを入力してください"/>
                 </div>
                 <div class="search__gender">
-                    <select class="search__gender--select" name="category_id">
-                        <option class="search__gender--option" value="男性" >男性</option>
-                        <option class="search__gender--option" value="女性" >女性</option>
-                        <option class="search__gender--option" value="その他" >その他</option>
-                        <option class="search__gender--option" value="全て" >全て</option>
+                    <select class="search__gender--select" name="gender">
+                        <option class="search__detail--text" value="" disabled selected>性別</option>
+                        <option class="search__gender--option" value="男性" {{ request('gender') == '男性' ? 'selected' : '' }}>男性</option>
+                        <option class="search__gender--option" value="女性"{{ request('gender') == '女性' ? 'selected' : '' }}>女性</option>
+                        <option class="search__gender--option" value="その他" {{ request('gender') == 'その他' ? 'selected' : '' }}>その他</option>
+                        <option class="search__gender--option" value="全て" {{ request('gender') == '全て' ? 'selected' : '' }}>全て</option>
                     </select>
                 </div>
                 <div class="search__detail">
-                    <select class="search__detail-select">
+                    <select class="search__detail-select" name="detail">
 					    <option class="search__detail--text" value="" disabled selected>お問い合わせ内容</option>
                         <option class="form__detail--option" value="商品のお届けについて">商品のお届けについて</option>
 						<option class="form__detail--option" value="商品の交換について">商品の交換について</option>
@@ -45,10 +45,10 @@
                     </select>
                 </div>
                 <div class="search__date">
-                    <input class="search__date--text" type="date" name="search-name" value="" />
+                    <input class="search__date--text" type="date" name="search-date" value="" />
                 </div>
                 <div class="search__button">
-				    <button class="search__button--item" type="submit">検索</button>
+				    <input class="search__button--item" type="submit" value="検索">
                 </div>
                 <div class="search__reset">
                     <input class="search__reset--item" type="reset" value="リセット" />
@@ -60,7 +60,7 @@
                      <a class="link__export--item" href="">エクスポート</a>
                 </div>
                 <div class="sab-nav_page">
-                    {{ $contacts->links() }}
+                    {{ $contacts->appends(request()->query())->links() }}
                 </div>
             </div>
         </form>
@@ -77,6 +77,7 @@
                     <th class="admin-table__header">お問い合わせ内容</th>
                     <th class="admin-table__header"></th>
 				</tr>
+        @if (@isset($contacts))
             @foreach ($contacts as $contact)
                 <tr class="admin-table__row">
 					<td class="admin-table__text">
@@ -92,7 +93,7 @@
 					</td>
                     <td class="admin-table__text">
                         <div class="table__email">
-						    <input class="email--item type="email" name="email" value="{{ $contact['email'] }}" readonly />
+						    <input class="email--item" type="email" name="email" value="{{ $contact['email'] }}" readonly />
                         </div>
                     </td>
                     <td class="admin-table__text">
@@ -105,7 +106,8 @@
                         </div>
                     </td>
                 </tr>
-            @endforeach  
+            @endforeach 
+        @endif 
 			</table>
 		</div>
 	</form>

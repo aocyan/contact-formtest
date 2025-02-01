@@ -71,12 +71,23 @@ class ContactController extends Controller
     {
 		$contacts = Contact::with('category')->paginate(7);
 
-
-        //$categories = Contact::with('category')->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->get();
-
         return view('admin', compact('contacts'));
 
 	}
+
+       public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function search(Request $request)
+    {
+        $gender = $request->input('gender');
+
+         $contacts = Contact::where('gender', 'LIKE',"%{$gender}%")->paginate(7);
+
+        return view('admin', compact('contacts'));
+    }
 
     public function login()
     {
